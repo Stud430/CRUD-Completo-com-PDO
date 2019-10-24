@@ -1,0 +1,44 @@
+
+
+h3 { 
+    font-family:Bahnschrift Light;
+	display:block; 
+    font-size:25px;
+	margin-bottom:5px 
+}
+
+label [for="text"]{ 
+    font-family:Bahnschrift Light;
+	display:block; 
+    font-size:25px;
+	margin-bottom:5px 
+}
+
+
+input[type="text"] {
+    border:1px solid #ccc;
+    padding:10px;
+    margin-bottom:20px;
+    outline:none;
+    width:200px;
+}
+
+input[type="submit"] {
+    background:#A8FFE1;
+    color:#487347;
+    font-family:Bahnschrift Light;
+    font-size:18px;
+    border:2px solid #A8FFE1;
+    padding:6px 16px;
+    cursor:pointer;
+}
+
+input[type="reset"] {
+    background:#A8FFE1;
+    color:#487347;
+    font-family:Bahnschrift Light;
+    font-size:18px;
+    border:2px solid #A8FFE1;
+    padding:6px 16px;
+    cursor:pointer;
+}
