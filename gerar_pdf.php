@@ -2,19 +2,21 @@
 
 	include_once("conexao.php");
 
-	$html = '<table border=3'; // cellspacing=2 cellpadding=20';	
+	$html = '<table border=1 width=75% cellpadding=2>'; // cellspacing=2 cellpadding=20';	
+	$html .= '<thead>';
 	$html .= '<tr>';
-	$html .= '<td width=525 align="center"> USUARIO:	</td>';
-	$html .= '<td width=525 align="center"> SENHA: </td>';	
-	$html .= '</tr> <br>';
+	$html .= '<td width=75% align="center"> USUARIO: </td>';
+	$html .= '<td width=75% align="center"> SENHA: </td>';	
+	$html .= '</tr> ';
+	$html .= '</thead>';	
 	$html .= '<tbody>';
 
 
 	$result_transacoes = "SELECT usuario, senha FROM login";
 	$resultado_trasacoes = mysqli_query($conecta, $result_transacoes);
 	while($row_transacoes = mysqli_fetch_assoc($resultado_trasacoes)){
-		$html .= '<tr> <br> <td>'.$row_transacoes['usuario'] . "</td>";
-		$html .= '<td>'.$row_transacoes['senha'] . "</td> </tr>";		
+		$html .= '<tr><td><center>'.$row_transacoes['usuario'] . "</center></td>";
+		$html .= '<td><center>'.$row_transacoes['senha'] . "</center></td> </tr>";		
 	}
 
 
