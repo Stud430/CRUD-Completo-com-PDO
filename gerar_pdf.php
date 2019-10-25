@@ -2,27 +2,20 @@
 
 	include_once("conexao.php");
 
-	$html = '<table border=1 width=75% cellpadding=2>'; // cellspacing=2 cellpadding=20';	
-	$html .= '<thead>';
+	$html = '<br><table border=1 align=center width=50% cellspacing=0 cellpadding=10> <body>'; // cellspacing=2 cellpadding=20';	
 	$html .= '<tr>';
 	$html .= '<td width=75% align="center"> USUARIO: </td>';
-	$html .= '<td width=75% align="center"> SENHA: </td>';	
-	$html .= '</tr> ';
-	$html .= '</thead>';	
-	$html .= '<tbody>';
+	$html .= '<td width=75% align="center"> SENHA: </td> </tr><br>';	
 
 
 	$result_transacoes = "SELECT usuario, senha FROM login";
 	$resultado_trasacoes = mysqli_query($conecta, $result_transacoes);
 	while($row_transacoes = mysqli_fetch_assoc($resultado_trasacoes)){
-		$html .= '<tr><td><center>'.$row_transacoes['usuario'] . "</center></td>";
-		$html .= '<td><center>'.$row_transacoes['senha'] . "</center></td> </tr>";		
+		$html .= '<tr><br><td align=center>'.$row_transacoes['usuario'] . "</td>";
+		$html .=  "<td align=center>" . $row_transacoes['senha'] . "</td> </tr>";		
 	}
 
-
-	$html .= '</tbody>';	
-	$html .= '</table>';
-
+	$html .= '</table> </body>';
 	
 	//referenciar o DomPDF com namespace
 	use Dompdf\Dompdf;
