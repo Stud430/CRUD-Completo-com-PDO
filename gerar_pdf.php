@@ -26,6 +26,9 @@
 	//Criando a Instancia
 	$dompdf = new DOMPDF();
 	
+	// Defini o tipo de Papel e sua Orientacao
+	$dompdf->setPaper('A4','portrait');
+
 	// Carrega seu HTML
 	$dompdf->load_html(' <h1 style="text-align: center;"> Listagem de Usuarios do Sistema </h1>	' . $html .'
 		');
