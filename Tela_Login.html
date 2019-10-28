@@ -20,20 +20,34 @@ body {
 	<tr>
 		<td width=525 align="right">
 		<center><label for="login"> Login </label>
-				<body>
-				<br><br>
-				<form action="testa_login.php" method="post">
-						<label for="usuario"> Usuário </label>
-						<input type="text" name="usuario" id="usuario" size="10"> <br><br>
-						<label for="senha"> Senha </label>
-						<input type="text" name="senha" id="senha" size="10"> <br><br>
+			<body>
+			<br><br>
+			<form action="valida_login.php" method="post">
+				<label for="usuario"> Usuário </label>
+				<input type="text" name="usuario" id="usuario" size="10" style="width:200;height:30" placeholder="Usuário" required> <br>
+				<label for="senha"> Senha </label>
+				<input type="password" name="senha" id="senha" size="10" style="width:200;height:30" placeholder="Password" required>
+
+				<img src="senha_criptografar.png"  onclick="mostrarSenha()"> <br><br>
+				<input type="submit" name="submit" value="Entrar">
+
+ 				<br><br> <a href="Tela_Cadastro.html"> Cadastre-se </a>
+				<br><br> <a href="gerar_pdf.php"> Lista LOGIN`s </a>
+			</form>
 
 
-						<input type="submit" name="submit" value="Entrar">
-						<br><br> <a href="Tela_Cadastro.html"> Cadastre-se </a>
-						<br><br> <a href="gerar_pdf.php"> Lista LOGIN`s </a>
-				</form>
-				</body>
+			<script>
+				function mostrarSenha() {
+						var tipo = document.getElementById('senha');
+						if ( tipo.type == "password") {
+							tipo.type = "text";
+						}else {
+							tipo.type = "password";
+						}
+				}
+			</script>
+			<!-- <script type="text/javascript" src="js/senha_criptografada.js"></script> -->
+			</body>
 		</center>
 		</td>
 	</tr>
