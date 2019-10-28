@@ -12,20 +12,24 @@ label [for="senha"]{
 	margin-bottom:5px 
 }
 
+img{
+    width: 30px;
+    height: 20px;
+    }
+
 
 input[type="text"] {
     border:1px solid #ccc;
     padding:10px;
     margin-bottom:20px;
     outline:none;
-    width:200px;
 }
 
 input[type="submit"] {
     background:#A8FFE1;
     color:#487347;
     font-family:Bahnschrift Light;
-    font-size:18px;
+    font-size:18px; 
     border:2px solid #A8FFE1;
     padding:10px 20px;
     cursor:pointer;
