@@ -1,8 +1,8 @@
 <html>
-<head>
-<title> Tela De Login </title>
+<head> <br>
+<title> Tela De Cadastro </title>
 <link rel="stylesheet" href="css/estiloCadastro.css">
-<link rel="stylesheet" type="text/css" href="css/jquery-3.4.1.min.js">s
+<link rel="stylesheet" type="text/css" href="css/jquery-3.4.1.min.js">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 
 <style>
@@ -12,42 +12,90 @@ body {
 }
 </style>
 
+<table border=0 align=right width=20% cellspacing=0 cellpadding=10>
+<tr>
+	<td align=center> <a href="Tela_Cadastro.html"> CADASTRO </a> </td> 
+	<td align=center> <label> | </label> </td>
+	<td align=center> <a href="Listagem_PDO.php"> LISTAGEM </a> </td>
+</tr>
+</table>
+
+
+<br>
+<hr>
+
 </head>
 
-<br><br><br><br>	
 <body>
 	<center>		
-	<form action="cadastro.php" method="post">
-		<table border=0 cellspacing=0> 
-		<tr> 
-		<td colspan=2> <center><label for="cadastro"> <h3>   Cadastro </h3> </label></center></td>
-		</tr>
+	<form action="cadastroPDO.php" method="post">
+		<table border="1">
+		<tr><td><center><label for="cadastro"> <h3>   Cadastro </h3> </label></center></td></tr>
 
-		<tr>
-			<td align="center"><br><label for="nome"> Nome Completo </label></td>
-			<td align="center"><br><p><input type="text" class="form-control" name="nome" id="name" size="10"> </p></td>
-		</tr>
+		<tr><td>
+		<label for="text"> Nome Completo </label>
+		<input type="text" class="form-control" name="nome" id="name" size="10"> 
 
-		<tr>
-			<td align="center"><br><label for="idade"> Idade </label></td>
-			<td align="center"><br><p><input type="text" class="form-control" name="idade" id="idade" size="10"> </p></td>
-		</tr>
+		<label for="text"> Idade </label>
+		<input type="text" class="form-control" name="idade" id="idade" size="10"> 
 
-		<tr>
-			<td align="center"><br><label for="email"> E-mail </label></td>
-			<td align="center"><br><p><input type="text" class="form-control" name="email" id="email" size="10" required> </p></td>
-		</tr>
+		<label for="text"> E-mail </label>
+		<input type="text" class="form-control" name="email" id="email" size="10" required> 
 
-		<tr>
-			<td align="center"><label for="usuario"> Usuário </label></td>
-			<td align="center"><br><input type="text" class="form-control" name="usuario" id="usuario" size="10"> </td>
-		</tr>
-		<tr>	
-			<td align="center"><label for="nome"> Senha </label></td>
-			<td align="center"><br><input type="text" class="form-control" name="senha" id="senha" size="10"> </td>
-		</tr>
-			
+		<label for="text"> Usuário </label>
+		<input type="text" class="form-control" name="usuario" id="usuario" size="10">
+
+		<label for="text"> Senha </label>
+		<input type="text" class="form-control" name="senha" id="senha" size="10">
+		</td></tr>
 		</table>
+
+		<table border=1>	
+		<tr> 
+			<td><center><input type="submit" name="submit" value="Enviar"></center></td>
+			<td><center><input type="reset" name="reset" value="Limpar"></center></td> 
+		</tr><br>
+
+		<tr>
+			<td><br><button type="reset" class="btn btn-info">Info</button></td>
+		</tr>
+		
+		<tr>
+			<td><a href="Tela_Login.html"> Página Principal </a></td>
+		</tr>	
+     	</table>
+
+</form>
+</center> 
+</body>
+
+
+
+<!-- 
+<link rel="stylesheet" href="css/estiloCadastro.css">
+
+<body>
+	<center>		
+	<form action="cadastroPDO.php" method="post">
+		<table border="0">
+		<tr><td><center><label for="cadastro"> <h3>   Cadastro </h3> </label></center></td></tr>
+
+		<tr><td>
+		<label for="text"> Nome Completo </label>
+		<input type="text" class="form-control" name="nome" id="name" size="10"> 
+
+		<label for="text"> Idade </label>
+		<input type="text" class="form-control" name="idade" id="idade" size="10"> 
+
+		<label for="text"> E-mail </label>
+		<input type="text" class="form-control" name="email" id="email" size="10" required> 
+
+		<label for="text"> Usuário </label>
+		<input type="text" class="form-control" name="usuario" id="usuario" size="10">
+
+		<label for="text"> Senha </label>
+		<input type="text" class="form-control" name="senha" id="senha" size="10">
+		</td></tr>
 
 		<table border=0>	
 		<tr> 
@@ -61,12 +109,56 @@ body {
 		
 		<tr>
 			<td><a href="Tela_Login.html"> Página Principal </a></td>
-		</tr>
-	
-	</table>
-
+		</tr>	
+     	</table>
+</table>
 	</form>
 	</center> 
 </body>
+ -->
+
+ <!-- 
+<body>
+	<center>		
+	<form action="cadastroPDO.php" method="post">
+		<table border="0">
+		<tr><td><center><label for="cadastro"> <h3>   Cadastro </h3> </label></center></td></tr>
+
+	<tr>
+		<td><label for="nome"> Nome Completo </label></td>
+		<td><label for="idade"> Idade </label></td>
+		<td><label for="email"> E-mail </label></td>
+		<td><label for="usuario"> Usuário </label></td>
+		<td><label for="senha"> Senha </label></td>
+	</tr>
+
+	<tr>
+		<td><input type="text" class="form-control" name="nome" id="name" size="10"></td>
+		<td><input type="text" class="form-control" name="idade" id="idade" size="10"></td> 
+<td><input type="text" class="form-control" name="email" id="email" size="10" required></td>
+		<td><input type="text" class="form-control" name="usuario" id="usuario" size="10"></td>
+		<td><input type="text" class="form-control" name="senha" id="senha" size="10"></td>
+	</tr>
+	</table>
+
+		<table border=0>	
+		<tr> 
+			<td><center><input type="submit" name="submit" value="Enviar"></center></td>
+			<td><center><input type="reset" name="reset" value="Limpar"></center></td> 
+		</tr><br>
+
+		<tr>
+			<td><br><button type="reset" class="btn btn-info">Info</button></td>
+		</tr>
+		
+		<tr>
+			<td><a href="Tela_Login.html"> Página Principal </a></td>
+		</tr>	
+     	</table>
+</table>
+	</form>
+	</center> 
+</body>
+ -->
 
 </html>
