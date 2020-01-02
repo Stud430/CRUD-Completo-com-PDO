@@ -1,8 +1,8 @@
-<?php	
+﻿<?php	
 
 	include_once("conexao.php");
 
-	$html = '<br><table border=1 align=center width=50% cellspacing=0 cellpadding=10> <body>'; // cellspacing=2 cellpadding=20';	
+	$html = '<br><table border=1 align=center width=50% cellspacing=0 cellpadding=10> <body>'; 
 	$html .= '<tr>';
 	$html .= '<td width=75% align="center"> USUARIO: </td>';
 	$html .= '<td width=75% align="center"> SENHA: </td> </tr><br>';	
@@ -15,7 +15,9 @@
 		$html .=  "<td align=center>" . $row_transacoes['senha'] . "</td> </tr>";		
 	}
 
-	$html .= '</table> </body>';
+
+	$html .= '</body></table>';
+
 	
 	//referenciar o DomPDF com namespace
 	use Dompdf\Dompdf;
@@ -32,6 +34,7 @@
 	// Carrega seu HTML
 	$dompdf->load_html(' <h1 style="text-align: center;"> Listagem de Usuarios do Sistema </h1>	' . $html .'
 		');
+
 
 	//Renderizar o html
 	$dompdf->render();
